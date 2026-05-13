@@ -20,41 +20,8 @@ Navigate to the working directory.
 <br>
 Download the neccessary packages.
 <br>
-```npm i react-native-worklets```
+```npm install```
 <br>
-```npm install --save react-native-vector-icons```
-<br>
-```npm install react-native-reanimated react-native-gesture-handler react-native-screens```
-<br>
-```react-native-safe-area-context @react-native-community/masked-view```
-<br>
-```npm install @react-navigation/stack @react-navigation/native``` 
-<br>
-```npm install react-native-sqlite-storage```
-<br>
-```npm install react-native-ui-datepicker ```
-<br>
-```npm install react-native-select-dropdown``` 
-<br>
-```npm i @react-native-community/checkbox```
-<br>
-```npm i @react-native-async-storage/async-storage```
-<br>
-```npm i react-native-document-picker``` 
-<br>
-```npm i react-native-file-viewer```
-<br>
-```npm install --save @notifee/react-native```
-<br>
-```npm i react-native-gesture-handler ```
-<br>
-```npm i @testing-library/react-native```
-<br>
-To install the CocoaPods dependencies to link native modules and generate the .xcworkspace file.
-<br>
-```cd ios```
-<br>
-```pod install```
 
 ### Phase 3: Selective Checkout
 Remove unnecessary file, and only work with specific files from remote repository.
