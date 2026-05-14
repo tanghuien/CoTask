@@ -40,11 +40,17 @@ Remove unnecessary file, and only work with specific files from remote repositor
 ```git checkout origin/main -- ios/CoTask/Images.xcassets```
 <br>
 
-### Phase 4: Download necessary packages
+### Phase 4: Download necessary packages and install dependencies
 Download the neccessary packages.
 <br>
 ```npm install```
-
+<br>
+<br>
+Install dependencies:
+<br>
+```cd ios```
+<br>
+```pod install``` 
 
 ### Phase 5: Set up assets 
 Open white icon CoTask.xcworkspace in ios folder. 
@@ -64,6 +70,10 @@ Add Item 0: Octicons.ttf
 Remove Octicons.ttf from app > build phases > copy bundle resources. 
 <br>
 
+Navigate to the working directory.
+<br>
+```cd CoTask```
+
 Update project dependencies:
 <br>
 ```cd ios```
@@ -75,7 +85,7 @@ Finally, launch the app by
 <br>
 Keeping the terminal open.
 <br>
-Type npm start and press Enter.
+Type "npm start" and press Enter.
 <br>
 Leave the terminal window running in the background while running the stimulator in Xcode.
 <br>
