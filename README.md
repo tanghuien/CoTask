@@ -7,13 +7,17 @@ Download Xcode from [app store](https://share.google/SU0qYHkDiBqV8tg5G) or [webs
 Ensure ruby, npm is already installed.
 
 ### Phase 2: Initialise React Native Project
-Open your terminal and navigate to your desired working directory.
+Open your terminal and navigate to a desired working directory.
 <br>
 ```npx @react-native-community/cli@latest init CoTask```
 <br>
 If asked to install cocoa pods, enter n
 
 ### Phase 3: Selective Checkout
+Navigate to the working directory.
+<br>
+```cd CoTask```
+
 Remove unnecessary file, and only work with specific files from remote repository.
 <br>
 ```rm "App.tsx"```
@@ -37,9 +41,6 @@ Remove unnecessary file, and only work with specific files from remote repositor
 <br>
 
 ### Phase 4: Download necessary packages
-Navigate to the working directory.
-<br>
-```cd cotask```
 <br>
 Download the neccessary packages.
 <br>
