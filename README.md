@@ -41,11 +41,10 @@ Remove unnecessary file, and only work with specific files from remote repositor
 <br>
 
 ### Phase 4: Download necessary packages
-<br>
 Download the neccessary packages.
 <br>
 ```npm install```
-<br>
+
 
 ### Phase 5: Set up assets 
 Open white icon CoTask.xcworkspace in ios folder. 
