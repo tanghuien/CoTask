@@ -13,20 +13,12 @@ Open your terminal and navigate to your desired working directory.
 <br>
 If asked to install cocoa pods, enter n
 
-### Phase 3: Download necessary packages
-Navigate to the working directory.
-<br>
-```cd cotask```
-<br>
-Download the neccessary packages.
-<br>
-```npm install```
-<br>
-
 ### Phase 3: Selective Checkout
 Remove unnecessary file, and only work with specific files from remote repository.
 <br>
 ```rm "App.tsx"```
+<br>
+```rm "package.json"```
 <br>
 ```git init```
 <br>
@@ -36,14 +28,25 @@ Remove unnecessary file, and only work with specific files from remote repositor
 <br>
 ```git checkout origin/main -- App.tsx```
 <br>
+```git checkout origin/main -- package.json```
+<br>
 ```git checkout origin/main -- pages```
 <br>
 
 ```git checkout origin/main -- ios/CoTask/Images.xcassets```
 <br>
 
+### Phase 4: Download necessary packages
+Navigate to the working directory.
+<br>
+```cd cotask```
+<br>
+Download the neccessary packages.
+<br>
+```npm install```
+<br>
 
-### Phase 4: Set up assets 
+### Phase 5: Set up assets 
 Open white icon CoTask.xcworkspace in ios folder. 
 <br>
 To create custom assets 
@@ -67,7 +70,7 @@ Update project dependencies:
 <br>
 ```pod install``` 
 
-### Phase 5: Completion
+### Phase 6: Completion
 Finally, launch the app by
 <br>
 Keeping the terminal open.
