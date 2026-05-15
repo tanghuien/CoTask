@@ -258,6 +258,7 @@ const CreateTask = (props) => {
                                     styles={{
                                         ...defaultStyles,
                                         today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        today_label: { color: "#64ADF9" },
                                         selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
                                         selected_label: { color: 'white' }, 
                                     }}
@@ -297,6 +298,7 @@ const CreateTask = (props) => {
                                     styles={{
                                         ...defaultStyles,
                                         today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        today_label: { color: "#64ADF9" },
                                         selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
                                         selected_label: { color: 'white' }, 
                                     }}
@@ -370,14 +372,20 @@ const CreateTask = (props) => {
                                     mode="range"
                                     startDate={repeatStartDate}
                                     endDate={repeatEndDate}
-                                    selectedItemColor="#64ADF9"
-                                    calendarTextStyle={{ color: "black" }}
-                                    headerTextStyle={{ color: "black" }}
-                                    weekDaysTextStyle={{ color: "black" }}
+                                    weekdaysFormat="short"
+                                    styles={{
+                                        ...defaultStyles,
+                                        today: { backgroundColor: "white", borderColor: '#64ADF9', borderWidth: 2, borderRadius: 50 },
+                                        today_label: { color: "#64ADF9" },
+                                        selected: { backgroundColor: "#64ADF9", borderRadius: 50 },
+                                        selected_label: { color: "white" },
+                                        range_fill: { backgroundColor: '#64ADF925', marginVertical: 5 },
+                                    }}
                                     onChange={(params) => {
                                         setRepeatStartDate(params.startDate);
                                         setRepeatEndDate(params.endDate);
-                                    }} />}
+                                    }} />
+                                }
                             </View>
                         </View>
 

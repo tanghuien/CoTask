@@ -187,6 +187,7 @@ const ViewTask = ({ route, navigation }) => {
                                     styles={{
                                         ...defaultStyles,
                                         today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        today_label: { color: "#64ADF9" },
                                         selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
                                         selected_label: { color: 'white' }, 
                                     }}
