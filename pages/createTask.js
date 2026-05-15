@@ -177,7 +177,7 @@ const CreateTask = (props) => {
                 db.transaction(function (tx) {
                     tx.executeSql(
                         'INSERT INTO Tasks (task_title, task_note, priority_level, created_timestamp, updated_date, due_date, reminder, reminder_datetime, repeat, repeat_frequency, repeat_start_date, repeat_end_date, attachment_name, attachment_path, completed, completed_date, task_points, user_id) VALUES (?,?,?,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                        [taskTitle, taskNote, priority_level, null, duedate.format("YYYY-MM-DD"), reminderIsEnabled, reminder_datetime.toString(), repeatIsEnabled, frequency, repeatStartDate.format("YYYY-MM-DD").toString(), repeatEndDate.format("YYYY-MM-DD").toString(), "", "", false, "", taskPoints, 1],
+                        [taskTitle, taskNote, priority_level, null, dayjs(duedate).format("YYYY-MM-DD"), reminderIsEnabled, reminder_datetime.toString(), repeatIsEnabled, frequency, repeatStartDate.format("YYYY-MM-DD").toString(), repeatEndDate.format("YYYY-MM-DD").toString(), "", "", false, "", taskPoints, 1],
                         (tx, results) => {
                             if (results.rowsAffected > 0) {
                                 props.customClick();
@@ -190,7 +190,7 @@ const CreateTask = (props) => {
                 db.transaction(function (tx) {
                     tx.executeSql(
                         'INSERT INTO Tasks (task_title, task_note, priority_level, created_timestamp, updated_date, due_date, reminder, reminder_datetime, repeat, repeat_frequency, repeat_start_date, repeat_end_date, attachment_name, attachment_path, completed, completed_date, task_points, user_id) VALUES (?,?,?,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                        [taskTitle, taskNote, priority_level, null, duedate.format("YYYY-MM-DD"), reminderIsEnabled, reminder_datetime.toString(), repeatIsEnabled, frequency, repeatStartDate.format("YYYY-MM-DD").toString(), repeatEndDate.format("YYYY-MM-DD").toString(), fileResponse[0].name, fileResponse[0].uri, false, "", taskPoints, 1],
+                        [taskTitle, taskNote, priority_level, null, dayjs(duedate).format("YYYY-MM-DD"), reminderIsEnabled, reminder_datetime.toString(), repeatIsEnabled, frequency, repeatStartDate.format("YYYY-MM-DD").toString(), repeatEndDate.format("YYYY-MM-DD").toString(), "", "", false, "", taskPoints, 1],
                         (tx, results) => {
                             if (results.rowsAffected > 0) {
                                 props.customClick();
