@@ -5,7 +5,7 @@ import Mytextinput from './components/Mytextinput';
 
 import Mybutton from './components/Mybutton';
 import { openDatabase } from 'react-native-sqlite-storage';
-import DateTimePicker from 'react-native-ui-datepicker';
+import DateTimePicker, { useDefaultStyles } from 'react-native-ui-datepicker';
 import dayjs from 'dayjs';
 import SelectDropdown from 'react-native-select-dropdown'
 import Icon from 'react-native-vector-icons/Octicons';
@@ -17,6 +17,8 @@ import { Swipeable } from 'react-native-gesture-handler';
 var db = openDatabase({ name: 'database.db' });
 
 const EditTask = (props) => {
+    const defaultStyles = useDefaultStyles();
+
     const [refreshed, setRefreshed] = useState(false);
     const [task, setTask] = useState([]);
     const [taskTitle, setTaskTitle] = useState('');
@@ -316,10 +318,13 @@ const EditTask = (props) => {
                                 {duedate_picker_isVisible && <DateTimePicker
                                     mode="single"
                                     date={duedate}
-                                    selectedItemColor="#779ECB"
-                                    calendarTextStyle={{ color: "#779ECB" }}
-                                    headerTextStyle={{ color: "#779ECB" }}
-                                    weekDaysTextStyle={{ color: "#779ECB" }}
+                                    weekdaysFormat = "short"
+                                    styles={{
+                                        ...defaultStyles,
+                                        today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
+                                        selected_label: { color: 'white' }, 
+                                    }}
                                     onChange={(params) => setDuedate(params.date)}
                                 />}
                             </View>
@@ -352,10 +357,13 @@ const EditTask = (props) => {
                                     mode="single"
                                     date={reminder_datetime}
                                     timePicker={true}
-                                    selectedItemColor="#779ECB"
-                                    calendarTextStyle={{ color: "#779ECB" }}
-                                    headerTextStyle={{ color: "#779ECB" }}
-                                    weekDaysTextStyle={{ color: "#779ECB" }}
+                                    weekdaysFormat = "short"
+                                    styles={{
+                                        ...defaultStyles,
+                                        today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
+                                        selected_label: { color: 'white' }, 
+                                    }}
                                     onChange={(params) => selectReminder(params.date)}
                                 />}
                             </View>

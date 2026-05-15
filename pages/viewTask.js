@@ -7,11 +7,13 @@ import Icon from 'react-native-vector-icons/Octicons';
 import notifee, { TimestampTrigger, TriggerType } from '@notifee/react-native';
 import FileViewer from "react-native-file-viewer";
 import EditTask from './editTask';
-import DateTimePicker from 'react-native-ui-datepicker';
+import DateTimePicker, { useDefaultStyles } from 'react-native-ui-datepicker';
 
 var db = openDatabase({ name: 'database.db' });
 
 const ViewTask = ({ route, navigation }) => {
+    const defaultStyles = useDefaultStyles();
+
     const [task, setTask] = useState([]);
     const [reminderIsEnabled, setReminderIsEnabled] = useState(false);
     const [reminder_picker_isVisible, setReminder_picker_IsVisible] = useState(false);
@@ -181,10 +183,13 @@ const ViewTask = ({ route, navigation }) => {
                                     mode="single"
                                     date={reminder_datetime}
                                     timePicker={true}
-                                    selectedItemColor="#779ECB"
-                                    calendarTextStyle={{ color: "#779ECB" }}
-                                    headerTextStyle={{ color: "#779ECB" }}
-                                    weekDaysTextStyle={{ color: "#779ECB" }}
+                                    weekdaysFormat = "short"
+                                    styles={{
+                                        ...defaultStyles,
+                                        today: { borderColor: "#64ADF9", borderRadius: 50, borderWidth: 1 }, 
+                                        selected: { backgroundColor: "#64ADF9", borderRadius: 50 }, 
+                                        selected_label: { color: 'white' }, 
+                                    }}
                                     onChange={(params) => selectReminder(params.date)}
                                 />}
                             </View>
