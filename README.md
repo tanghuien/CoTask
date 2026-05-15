@@ -70,10 +70,6 @@ Add Item 0: Octicons.ttf
 Remove Octicons.ttf from app > build phases > copy bundle resources. 
 <br>
 
-Navigate to the working directory.
-<br>
-```cd CoTask```
-
 Update project dependencies:
 <br>
 ```cd ios```
@@ -84,6 +80,10 @@ Update project dependencies:
 Finally, launch the app by
 <br>
 Keeping the terminal open.
+<br>
+Navigate back to the working directory.
+<br>
+```cd ..```
 <br>
 Type "npm start" and press Enter.
 <br>
