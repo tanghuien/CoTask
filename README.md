@@ -1,4 +1,6 @@
-## CoTask - Task Management App
+## CoTask - Task Management App 
+Figma Design: [https://www.figma.com/design/WJHoBBrL7KIRuUCaqlG3bA/mid-prototype?node-id=0-1&t=ZxxcRavxSDDrOkrP-1](https://www.figma.com/design/WJHoBBrL7KIRuUCaqlG3bA/mid-prototype?node-id=0-1&t=ZxxcRavxSDDrOkrP-1)
+<br>
 These are the steps to run app on Xcode's stimulator and own iOS device.
 
 ### Phase 1: Prerequisites
